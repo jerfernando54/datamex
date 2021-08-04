@@ -7,13 +7,19 @@ body {
     margin: 0px;
 }
 
-/*.container {
+.content {
     padding: 70px 0px;
-}*/
+}
 
 p, li {
     color: #444;
     font-size: 14px;
+}
+
+/*top br*/
+.top-bar span{
+    font-size: 13px;
+    padding: 1px 5px
 }
 
 /*nav bar*/
@@ -32,6 +38,7 @@ header, .navbar {
 
 .navbar-light .navbar-nav .nav-link {
     color: #92271e;
+    font-weight: bold;
 }
 
 .navbar-extend-lg .navbar-nav .nav-link {
@@ -148,6 +155,7 @@ header, .navbar {
 .service-box h4 {
     font-size: 24px;
     margin-bottom: 20px;
+    color:#92271e;
 }
 
 .service-box:hover > i, .service-box:hover > h4 {
@@ -225,8 +233,11 @@ header, .navbar {
 
 /*responsive*/
 @media(max-width: 768px) {
-    /*geral*/
+    /*geral
     .container {
+        padding: 20px 0;
+    }*/
+    .content {
         padding: 20px 0;
     }
 
@@ -442,10 +453,10 @@ header, .navbar {
 
 /*responsive*/
 @media(max-width: 768px) {
-    /*geral*/
+    /*geral
     .container {
         padding: 20px 0;
-    }
+    }*/
 
     /*slider*/
     #mainslider .carousel-inner, #mainslider .carousel-item {

@@ -6,16 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datamexbss</title>
 
-    <!-- Fonte -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
-
     <!-- Estilos -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+       <!-- Fonte -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b670d8d9ef.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
+
+     <!-- Scripts (jQuery não pode ser o slim que vem do Boostrap) -->
+     <script
+     src="https://code.jquery.com/jquery-3.4.1.min.js"
+     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+     crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 </head>
 <body>
+    
+    <!--Top bar-->
+    <section class="bg-primary">
+        <div class="container topbar">
+            <div class="row top-bar">
+                <div class="col text-left">
+                   <span class="text-white">
+                    <i class="fab fa-facebook"></i>
+                   </span>
+
+                   <span class="text-white">
+                    <i class="fab fa-linkedin-in"></i>
+                   </span>
+
+                   <span class="text-white">
+                    <i class="fab fa-whatsapp"></i>
+                   </span>
+
+                   <span class="text-white">
+                    <i class="fas fa-map-marked-alt"></i>
+                   </span>
+
+                </div>
+                <div class="col text-right">
+                    <span class="text-white">
+                        <i class="fas fa-phone-alt"></i>
+                        +244 923 57 20 46 | +244 917 49 68 66
+                    </span>
+                    <span class="text-danger">
+                        |
+                    </span>
+                    <span class="text-white">
+                        <i class="fas fa-envelope"></i>
+                        carlos.fernandes@datamexbss.com
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Top bar-->
+
 
     <!--barra de navegation-->
     <header> 
@@ -33,7 +83,6 @@
                                 <a href="#" class="nav-item nav-link" id="home-menu">Inicio</a>
                                 <a href="#" class="nav-item nav-link" id="services-menu">Quem Somos</a>
                                 <a href="#" class="nav-item nav-link" id="asking-menu">Produtos</a>
-                                <a href="#" class="nav-item nav-link" id="about-menu">Serviços</a>
                                 <a href="#" class="nav-item nav-link" id="offers-menu">Suporte</a>
                                 <a href="#" class="nav-item nav-link" id="contact-menu">Recrutamento</a>
                                 <a href="#" class="nav-item nav-link" id="contact-menu">Login</a>
@@ -47,7 +96,9 @@
 
     
     <main>
+       
         <div class="container-fluid">
+            <!--slide show-->
             <div id="mainslider" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#mainslider" data-slide-to="0" class="active"></li>
@@ -84,24 +135,55 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
+
+            <!--services-area-->
+            <div id="services-area">
+                <div class="content p-5">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="main-title">
+                                Serviços
+                            </h3>
+                        </div>
+                        <div class="col-md-4 service-box">
+                            <i class="fas fa-hotel"></i>
+                            <h4>Consultoria</h4>
+                            <p>Baseado nos conhecimentos de analise, levantamento de requisitos desde 1991, sendo a DATAMEX profundamente conhecedora do mercado angolano desde 2004, o serviço de Consultoria tem como missão apoiar os clientes na analise das soluções que melhor se adequem para a obtenção do sucesso das organizações.<br/></p>
+                            <p>Com este serviço pretende-se avaliar toda a infraestrutura do cliente, desde a rede fisica, servidores, computadores, impressoras, sistemas de antivirus de modo a garantir o sucesso da implementação.</p>
+                            
+                        </div>
+
+                        <div class="col-md-4 service-box">
+                            <i class="fas fa-ethernet"></i>
+                            <h4>Redes & Comunicações</h4>
+                            <p>Pretende-se com este serviço, efectuar o levantamento das necessidade do cliente ao nivel de rede estruturada, seja ela de Dados ou Voz <br/></p> 
+                            <p>Depois da analise das necessidades, efectuando um trabalho, de alta qualidade, desde os materiais utilizados (cabos de rede, tomadas, bastidores) aos profissionais que as executam.</p>
+                            
+                        </div>
+
+                        <div class="col-md-4 service-box">
+                            <i class="fas fa-hotel"></i>
+                            <h4>Implementação primavera</h4>
+                            <p>Pretende-se com este serviço proceder à instalação e adequação do software PRIMAVERA seja ao nivel de Relatorios (colocação de logotipos, contas bancárias) seja ao nivel da modificação das regras de negocio, recorrendo à utilização do VBA disponibilizado pelas aplicações</p>
+                            
+                        </div>
+
+                        <div class="col-md-4 service-box align-center">
+                            <i class="fas fa-hotel"></i>
+                            <h4>Formação</h4>
+                            <p>Tendo como experiencia adquirida e suportada por formadores altamente qualificados, a formação permitirá transmitir ao cliente todo o tipo de informação necessária para que possa operar com as aplicações PRIMAVERA, sendo uma das areas fundamentais no sucesso dos projectos.</p>
+                            
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        
         </div>
     </main>
 
     <!--script do projecto-->
     <script src="js/scripts.js"></script>
-
-    <!-- Scripts (jQuery não pode ser o slim que vem do Boostrap) -->
-    <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <!-- Font Awesome 
-    <script src="https://kit.fontawesome.com/bf7e05c402.js" crossorigin="anonymous"></script>-->
-    <!-- Progress Bar 
-    <script src="js/progressbar.min.js"></script>-->
-    <!-- Parallax -->
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
 </body>
 </html>
