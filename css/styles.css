@@ -11,6 +11,7 @@ body {
     padding: 70px 0px;
 }
 
+
 p, li {
     color: #444;
     font-size: 14px;
@@ -38,14 +39,21 @@ header, .navbar {
 
 .navbar-light .navbar-nav .nav-link {
     color: #92271e;
-    font-weight: bold;
 }
 
-.navbar-nav .nav-link:hover, .nav-active{
-    background-color:#92271e;
-    color:rgb(255, 255, 255) !important;
+.navbar-nav .nav-link:hover{
+    background-color: #92271e;
+    color:cornsilk !important;
+    font-weight: bold;
     border-radius: 5px;
     margin: 1px
+}
+
+.navbar-nav .nav-active{
+    border-bottom: 2px solid #92271e;
+    border-top: 2px solid #92271e;
+    font-weight: bold;
+    border-radius: 5px;
 }
 
 .navbar-extend-lg .navbar-nav .nav-link {
@@ -103,7 +111,6 @@ header, .navbar {
 #about-area {
     background-color: #f9f9f9;
 }
-
 
 .main-title {
     color: #444;
@@ -350,9 +357,15 @@ header, .navbar {
 
 /*call to action*/
 #call-area {
-    background-color: #65DAF9;
+    color: #fff;
+    background-color: #343a40!important;
     text-transform: uppercase;
   }
+
+.gutters-sm {
+    margin-right: -.5rem;
+    margin-left: -.5rem;
+}
   
   #call-area .container {
     padding: 40px 100px;
