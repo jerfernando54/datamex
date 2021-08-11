@@ -144,7 +144,7 @@ header, .navbar {
 }
 
 #about-list i {
-    color: #65DAF9;
+    color: brown;
     margin-right: 15px;
  }
     
@@ -173,6 +173,7 @@ header, .navbar {
 
 .service-box:hover > i, .service-box:hover > h4 {
     color: #65DAF9;
+    cursor: pointer;
 }
 
 /*Dados mais pedidos*/
@@ -328,7 +329,7 @@ header, .navbar {
     border-radius: 0;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    border: 1px solid #65DAF9;
+    border: 1px solid brown;
     display: inline;
     box-sizing: border-box;
     width: 40%;
@@ -338,10 +339,10 @@ header, .navbar {
 
 #news-btn {
     color: floralwhite;
-    background-color: #65DAF9;
+    background-color: brown;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    border: 1px solid #65DAF9;
+    border: 1px solid brown;
     height: 40px;
     text-transform: uppercase;
     padding: 0 30px;
@@ -352,7 +353,7 @@ header, .navbar {
 
 #news-btn:hover {
     background-color: floralwhite;
-    color: #65DAF9;
+    color: brown;
 }
 
 /*call to action*/
@@ -372,28 +373,43 @@ header, .navbar {
   }
   
   #call-area .row {
-    display: block;
     text-align: center;
   }
   
-  #call-area p {
-    color: #FFF;
-    font-weight: bold;
-    font-size: 20px;
+  #call-area p, #call-area h5{
+    color: black;
+    font-size: 12px;
     margin-bottom: 0;
     height: 60px;
     line-height: 60px;
     letter-spacing: 2px;
     display: inline;
   }
+
+  #call-area .card {
+      border-top: 2px solid brown;
+      border-radius: 5px;
+      color: black !important
+  }
+
+  #call-area .card p{
+    color: black !important
+  }
+
+  #call-area .card {
+    color: black !important
+  }
   
-  #call-area #call-btn {
-    background-color: #FFF;
-    color: #65DAF9;
-    font-weight: bold;
-    margin-left: 30px;
-    font-size: 20px;
-    width: auto;
+  #call-area #call-btn, #call-area .btn{
+    background-color: floralwhite !important;
+    color: brown !important;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  #call-area #call-btn, .btn:hover{
+    background-color: brown !important;
+    color: #fff !important;
+    font-size: 14px;
     letter-spacing: 2px;
   }
 /*footer*/
@@ -448,7 +464,11 @@ header, .navbar {
 
 /*copy*/
 #copy-area {
-    background-color: #f1f1f1;
+    background-color: #343a40;
+}
+
+#copy-area p, #copy-area a {
+    color: #FFF !important;
 }
 
 #copy-area .container {
@@ -464,6 +484,7 @@ header, .navbar {
     font-weight: bold;
     color: #444;
 }
+
 
 #copy-area .container a:hover {
     text-decoration: none;
@@ -631,3 +652,13 @@ header, .navbar {
     }
 }
 
+/*outros estilos*/
+address {
+    font-size: 80%;
+    margin: 0px;
+    color: #0f0f0f;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 5px;
+}

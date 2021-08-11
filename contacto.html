@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- HERE JavaScript Libs & Style Sheets-->
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+    <!-- HERE JavaScript Libs & Style Sheets end-->
     <title>Datamexbss</title>
 
     <!-- Estilos -->
@@ -13,6 +21,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b670d8d9ef.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
+    
 
      <!-- Scripts (jQuery não pode ser o slim que vem do Boostrap) -->
      <script
@@ -94,86 +103,178 @@
 
     <main>
        
-        <div class="container-fluid pt-5">
-            <!--services-area-->
-            <div id="services-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h3 class="main-title">
-                                Serviços
-                            </h3>
-                        </div>
-                        <div class="col-12 service-box">
-                            <div class="card">
-                                <h5 class="card-header">Consultoria</h5>
-                                <div class="card-body">
-                                  <h5 class="card-title"><i class="fas fa-hotel"></i></h5>
-                                  <p class="card-text">
-                                    Baseado nos conhecimentos de analise, levantamento de requisitos desde 1991, sendo a DATAMEX profundamente conhecedora do mercado angolano desde 2004, o serviço de Consultoria tem como missão apoiar os clientes na analise das soluções que melhor se adequem para a obtenção do sucesso das organizações.
-                                    <br/><br/> 
-                                    Com este serviço pretende-se avaliar toda a infraestrutura do cliente, desde a rede fisica, servidores, computadores, impressoras, sistemas de antivirus de modo a garantir o sucesso da implementação.
-                                      <br/>
-                                  </p>
-                                </div>
-                            </div>                            
-                        </div>
-
-                        <div class="col-12 service-box">
-                            <div class="card">
-                                <h5 class="card-header">Redes & Comunicações</h5>
-                                <div class="card-body">
-                                  <h5 class="card-title"><i class="fas fa-ethernet"></i></h5>
-                                  <p class="card-text">
-                                    Pretende-se com este serviço, efectuar o levantamento das necessidade do cliente ao nivel de rede estruturada, seja ela de Dados ou Voz.
-                                    <br/><br/> 
-                                    Depois da analise das necessidades, efectuando um trabalho, de alta qualidade, desde os materiais utilizados (cabos de rede, tomadas, bastidores) aos profissionais que as executam.
-                                  </p>
-                                </div>
+        <div class="container">
+            <div class="row">
+                <!--This is the navegation bar-->
+                <ol class="col-12 breadcrumb">
+                    <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Contact Us</li>
+                </ol>
+                <div class="col-12">
+                   <h3>Contacte-nos</h3>
+                   <hr>
+                </div>
+            </div>
+    
+            <div class="row row-content mb-5">
+               <div class="col-12">
+                  <h3>Informação de Localização</h3>
+               </div>
+                <div class="col-12 col-sm-4 mt-3 offset-sm-1">
+                       <h5>Nosso Endereço</h5>
+                        <address style="font-size: 100%">
+                          Rua da Alfandega 17/19<br>
+                          Luanda - Angola<br>
+                          <i class="fa fa-phone"></i>: 939574174<br>
+                          <i class="fa fa-fax"></i>: +244722785<br>
+                          <i class="fa fa-envelope"></i>:
+                            <a href="mailto:comercial@datamexbss.com">comercial@datamexbss.com</a>
+                       </address>
+                </div>
+                <div class="col-12 col-sm-6 mt-3 offset-sm-1">
+                    <h5>Mapa de Localização</h5>
+                    <div style="width:35vw;height: 30vh;" id="mapContainer"></div>
+                </div>
+                <div class="col-12 col-sm-11 offset-sm-1">
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-primary" href="tel: +5354831109"><i class="fa fa-phone"></i> Chamar</a>
+                        <a role="button" class="btn btn-info" href=""><i class="fa fa-linkedin"></i> LinkedIn</a>
+                        <a role="button" class="btn btn-success" href="mailto:jerfernando54@gmail.com"><i class="fa fa-envelope-o"></i> Email</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row row-content mb-5">
+               <div class="col-12">
+                  <h3>Envie-nos o Seu Feedback</h3>
+               </div>
+                <div class="col-12 col-md-9">
+                    <form action="">
+                        <!--name and last name-->
+                        <div class="form-group row">
+                            <label for="firstname" class="col-md-2 col-form-label">Nome</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Escreva aqui o seu nome">
                             </div>
                         </div>
-
-                        <div class="col-12 service-box">
-
-                            <div class="card">
-                                <h5 class="card-header">Implementação primavera</h5>
-                                <div class="card-body">
-                                  <h5 class="card-title"><i class="fas fa-hotel"></i></h5>
-                                  <p class="card-text">Pretende-se com este serviço proceder à instalação e adequação do software PRIMAVERA seja ao nivel de Relatorios (colocação de logotipos, contas bancárias) seja ao nivel da modificação das regras de negocio, recorrendo à utilização do VBA disponibilizado pelas aplicações.
-                                  </p>
-                                </div>
-                              </div>
-                            
+                        <!--contacts-->
+                        <div class="form-group row">
+                            <label for="telnum" class="col-12 col-md-2 col-form-label">Contacto Tel.</label>
+                            <div class="col-7 col-md-7">
+                                <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Número telefónico">
+                            </div>
                         </div>
-
-                        <div class="col-12 service-box ">
-                            <div class="card">
-                                <h5 class="card-header">Formação</h5>
-                                <div class="card-body">
-                                  <h5 class="card-title"><i class="fas fa-hotel"></i></h5>
-                                  <p class="card-text">Tendo como experiencia adquirida e suportada por formadores altamente qualificados, a formação permitirá transmitir ao cliente todo o tipo de informação necessária para que possa operar com as aplicações PRIMAVERA, sendo uma das areas fundamentais no sucesso dos projectos.
-                                  </p>
-                                </div>
-                            </div>                            
+                        <div class="form-group row">
+                            <label for="emailid" class="col-md-2 col-form-label">Email</label>
+                            <div class="col-md-10">
+                                <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Email">
+                            </div>
                         </div>
-                       
+                        <!--<div class="form-group row">
+                            <div class="col-md-6 offset-md-2">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" name="approve" id="approve" value="">
+                                    <label class="form-check-label" for="approve">
+                                        <strong>May we contact you?</strong>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-3 offset-md-1">
+                                <select class="form-control">
+                                    <option>Tel.</option>
+                                    <option>Email</option>
+                                </select>
+                            </div>
+                        </div>-->
+                        <div class="form-group row">
+                            <label for="feedback" class="col-md-2 col-form-label">Sua Mensagem</label>
+                            <div class="col-md-10">
+                                <textarea class="form-control" id="feedback" name="feedback" rows="12"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="offset-md-2 col-md-10">
+                                <button type="submit" class="btn btn-primary">
+                                    Send Feedback
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                 <div class="col-12 col-md">
+                </div>
+           </div>
+    
+        </div>
+           
+        <!--footer area-->
+        <div class="footer">
+            <div id="copy-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                        <p>&copy; 2021<a href="http://www.datamexbss.com/index.html" target="_blank">Datamex</a> <br>
+                        Todos os direitos reservados</p>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="footer bg-dark">
-                <div class="row">
-                    <div class="col-12">
-                        <p class="text-white">abc</p>
-                    </div>
-                </div>
-            </div>
-        
         </div>
     </main>
 
     <!--script do projecto-->
     <script src="js/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+
+    <script>
+        //Step 1: initialize communication with the platform
+        // Replace variable YOUR_API_KEY with your own apikey
+        var platform = new H.service.Platform({
+            apikey: 'nSxKBpXtzWIRXgkyg91c0YPguTqaKrSlDx6TstIDL_g'
+        });
+        var defaultLayers = platform.createDefaultLayers();
+        
+        //Step 2: initialize a map - this map is centered over Europe
+        var map = new H.Map(document.getElementById('mapContainer'),
+            defaultLayers.vector.normal.map,
+            {
+                center: { lat: 50, lng: 5 },
+                zoom: 4,
+                pixelRatio: window.devicePixelRatio || 1
+            }
+        );
+        // This adds a resize listener to make sure that the map occupies the whole container
+        window.addEventListener('resize', () => map.getViewPort().resize());
+        
+        //Step 3: make the map interactive
+        // MapEvents enables the event system
+        // Behavior implements default interactions for pan/zoom (also on mobile touch environments)
+        var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+        // Create the default UI components
+        var ui = H.ui.UI.createDefault(map, defaultLayers);
+
+        // Marker code goes here
+
+        var LocationOfMarker = { lat:52.5192, lng: 13.4061};
+        
+
+        // Create a marker icon from an image URL:
+        var pngIcon = new H.map.Icon("https://cdn3.iconfinder.com/data/icons/tourism/eiffel200.png", { size: { w: 56, h: 56 } });
+
+        // Create a marker using the previously instantiated icon:
+        var marker = new H.map.Marker(LocationOfMarker, { icon: pngIcon });
+
+        // Add the marker to the map:
+        map.addObject(marker);
+
+        // Optionally, 
+        //Show the marker in the center of the map
+        map.setCenter(LocationOfMarker)
+
+        //Zooming so that the marker can be clearly visible
+        map.setZoom(8)
+
+    </script>
 </body>
 </html>
